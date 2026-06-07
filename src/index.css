@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f7a4f;
+  --color-primary-dark: #0a5c3c;
+  --color-primary-light: #149665;
+  --color-secondary: #7a1f2b;
+  --color-secondary-dark: #5c1720;
+  --color-secondary-light: #9a2838;
+  --color-accent: #c9a227;
+  --color-accent-light: #e0bc4a;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f6faf8;
+  --color-glass: rgba(255, 255, 255, 0.72);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  body {
+    @apply bg-surface-muted text-gray-900 font-sans antialiased text-[0.9375rem] leading-relaxed;
+    font-family: var(--font-sans);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    @apply text-xl md:text-2xl lg:text-3xl font-bold leading-snug;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    @apply text-lg md:text-xl font-bold;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/70 border border-white/40 shadow-lg shadow-primary/5;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/65 border border-white/50 shadow-xl shadow-primary/10 rounded-2xl;
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-2xl bg-white/82 border border-white/60 shadow-2xl shadow-primary/15;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #0f7a4f 0%, #7a1f2b 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 122, 79, 0.88) 0%,
+      rgba(122, 31, 43, 0.75) 50%,
+      rgba(15, 122, 79, 0.6) 100%
+    );
+  }
+
+  .gradient-soft {
+    background: linear-gradient(180deg, rgba(15, 122, 79, 0.06) 0%, rgba(122, 31, 43, 0.04) 100%);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #0f7a4f, #7a1f2b);
+  }
+
+  .shadow-premium {
+    box-shadow:
+      0 4px 24px rgba(15, 122, 79, 0.12),
+      0 8px 32px rgba(122, 31, 43, 0.08);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-12 md:py-16;
+  }
+
+  .page-hero-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+
+  .page-hero-subtitle {
+    @apply mt-3 text-sm md:text-base text-white/90 max-w-2xl;
+  }
+}

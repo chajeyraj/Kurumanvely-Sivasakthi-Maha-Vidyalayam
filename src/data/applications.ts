@@ -1,0 +1,48 @@
+import type { ApplicationItem } from '@/types/admin'
+
+export const APPLICATIONS: ApplicationItem[] = [
+  {
+    id: 'app-1',
+    studentName: 'K. Tharshan',
+    parentName: 'Mr. K. Tharshan',
+    grade: 'Grade 6',
+    email: 'tharshan.parent@email.com',
+    phone: '+94 77 123 4567',
+    status: 'pending',
+    submittedAt: '2026-05-28',
+    notes: 'Transfer from Jaffna Central College',
+  },
+  {
+    id: 'app-2',
+    studentName: 'S. Nirosha',
+    parentName: 'Mrs. S. Nirosha',
+    grade: 'A/L Science',
+    stream: 'Physical Science',
+    email: 'nirosha.s@email.com',
+    phone: '+94 76 234 5678',
+    status: 'reviewed',
+    submittedAt: '2026-05-20',
+  },
+  {
+    id: 'app-3',
+    studentName: 'R. Pradeep',
+    parentName: 'Mr. R. Pradeep',
+    grade: 'Grade 8',
+    email: 'pradeep.r@email.com',
+    phone: '+94 75 345 6789',
+    status: 'approved',
+    submittedAt: '2026-05-10',
+  },
+  {
+    id: 'app-4',
+    studentName: 'M. Kavitha',
+    parentName: 'Mrs. M. Kavitha',
+    grade: 'A/L Commerce',
+    stream: 'Commerce',
+    email: 'kavitha.m@email.com',
+    phone: '+94 72 456 7890',
+    status: 'rejected',
+    submittedAt: '2026-04-15',
+    notes: 'Incomplete documentation',
+  },
+]
